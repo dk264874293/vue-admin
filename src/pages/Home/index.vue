@@ -1,7 +1,15 @@
-<script lang="ts"></script>
+<script lang="ts" setup>
+import { useStore } from "vuex";
+const store = useStore();
+
+function onAdd() {
+  store.commit("add");
+}
+</script>
 
 <template>
-  <div>首页</div>
+  <div>{{ store.state.count }}</div>
+  <button @click="onAdd">add</button>
 </template>
 
 <style></style>
