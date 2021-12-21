@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-import { useStore } from "vuex";
+import { useStore } from "../../store/gvuex.ts";
 const store = useStore();
+
+console.log(store);
 
 function onAdd() {
   store.commit("add");

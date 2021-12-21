@@ -1,4 +1,5 @@
-import { createStore } from "vuex";
+// import { createStore } from "vuex";
+import { createStore } from "./gvuex";
 
 const store = createStore({
   state() {
@@ -8,9 +9,9 @@ const store = createStore({
   },
   mutations: {
     add(state) {
+      console.log("state", state);
       state.count++;
     },
   },
 });
-
 export default store;
